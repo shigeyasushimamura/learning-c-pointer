@@ -47,6 +47,14 @@ void initializeOperationArray(){
 }
 
 
+void checkIsAdd(fptrOperation f){
+    if(f == add){
+        printf("is add\n");
+    }else {
+        printf("is not add\n");
+    }
+}
+
 
 int main(void){
     typedef int (*fptr1_org)(int);
@@ -68,6 +76,13 @@ int main(void){
     
     printf("100 + 100 = %d\n", evaluation('+', 100,100));
     printf("100 + 100 = %d\n", evaluation('-', 100,100));
+
+
+    fptrOperation fptr3 = add;
+    fptrOperation fptr4 = sub;
+    checkIsAdd(fptr3);
+    checkIsAdd(fptr4);
+   
 
 
     return 0;
