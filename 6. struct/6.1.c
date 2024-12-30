@@ -9,6 +9,14 @@ typedef struct _person {
     unsigned int age;
 }Person;
 
+typedef struct _alternatePerson {
+    char* firstName;
+    char* lastName;
+    char* title;
+    short age;
+}AlternatePerson;
+
+
 
 int main(void){
     Person person;
@@ -29,6 +37,11 @@ int main(void){
     free(person.firstName);
     free(ptrPerson->firstName);
     free(ptrPerson);
+
+
+
+    AlternatePerson otherPerson;
+    printf("alternatePerson size:%ld\n",sizeof(AlternatePerson));
 
 
     return 0;   
